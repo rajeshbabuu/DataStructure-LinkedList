@@ -29,15 +29,27 @@ namespace DataStructure
             Console.WriteLine($"\n{objNode.data} inserted into Linked List");
         }
 
-        public void InsertFront(int new_data)
+        public void InsertLast(int new_data)
         {
-
-            Node objnew_node = new Node(new_data);
-            objnew_node.next = this.head;
-            this.head = objnew_node;
-            Console.WriteLine($"\n{objnew_node.data} is added at front");
+            Node objnew_Node = new Node(new_data);
+            objnew_Node.data = new_data;
+            objnew_Node.next = null;
+            if (head == null)
+            {
+                head = objnew_Node;
+            }
+            else
+            {
+                Node temp = new Node(new_data);
+                temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = objnew_Node;
+            }
+            Console.WriteLine($"\n{objnew_Node.data} is added at last");
         }
-
         public void Display()
         {
             Node temp = this.head;

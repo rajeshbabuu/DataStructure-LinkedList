@@ -8,8 +8,8 @@
 
             LinkedList objLinkedList = new LinkedList();
             objLinkedList.Add(70);
-            objLinkedList.InsertFront(30);
-            objLinkedList.InsertFront(56);
+            objLinkedList.InsertLast(30);
+            objLinkedList.InsertLast(56);
             objLinkedList.Display();
 
             Console.ReadLine();
