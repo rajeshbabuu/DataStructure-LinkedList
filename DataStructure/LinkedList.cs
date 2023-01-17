@@ -78,6 +78,25 @@ namespace DataStructure
             this.head = this.head.next;
             Console.WriteLine("\nRemoved first node");
         }
+
+        public void RemoveLastNode()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("\nLinked List Empty");
+            }
+            if (head.next == null)
+            {
+                Console.WriteLine("\nLinked List Empty");
+            }
+            Node objNew_Node = head;
+            while (objNew_Node.next.next != null)
+            {
+                objNew_Node = objNew_Node.next;
+            }
+            objNew_Node.next = null;
+            Console.WriteLine("\nRemoved Last Node");
+        }
         public void Display()
         {
             Node temp = this.head;
