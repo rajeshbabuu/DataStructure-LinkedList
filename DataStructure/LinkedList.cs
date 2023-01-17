@@ -68,6 +68,16 @@ namespace DataStructure
             }
             Console.WriteLine($"\n{objnew_Node.data} inserted at position {position}");
         }
+
+        public void RemoveFirstNode()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("\nList is Empty");
+            }
+            this.head = this.head.next;
+            Console.WriteLine("\nRemoved first node");
+        }
         public void Display()
         {
             Node temp = this.head;
